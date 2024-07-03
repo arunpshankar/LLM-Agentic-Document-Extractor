@@ -1,1 +1,156 @@
-"{\"reasoning\": \"\ud83d\udc4d\\n### STEP 1: Company Verification\\n**Company**: Centerra Gold\\n\\n### STEP 2 : Snippet Gathering\\n**Electricity from Non-Renewable Sources**: [\\\"At Mount Milligan and \u00d6ks\u00fct, 100% of our electricity is sourced from the regional electricity grid, representing 12% of our total GHG emissions.\\\", \\\"In 2022, our total Scope 1 emissions amounted to 101,313 tonnes CO2e, which is higher than the 97,303 tonnes CO2e emitted in 2021.\\\"]\\n\\n### STEP 3: Component Gathering\\n[Electricity from Non-Renewable Sources, 114524, tonnes CO2e, \\\"In 2022, our total Scope 1 emissions amounted to 101,313 tonnes CO2e, which is higher than the 97,303 tonnes CO2e emitted in 2021.\\\", REPORTED, Text]\\n\\n### STEP 4: Raw Value Extraction\\n**Electricity from Non-Renewable Sources**: 114524 tonnes CO2e [REPORTED]\\n\\n### STEP 5: Year Extraction\\n**Year**: 2022 [REPORTED]\\n\\n### STEP 6: Unit Verification\\n**Electricity from Non-Renewable Sources**: 114524 tonnes CO2e = 318.12 GWh (Conversion: 1 tonne CO2e = 2.78 MWh, 1 MWh = 0.001 GWh) [CONVERTED]\\n\\n### STEP 7: Coverage Evaluation\\n[FULL, Data covers all operational sites: \\\"At Mount Milligan and \u00d6ks\u00fct, 100% of our electricity is sourced from the regional electricity grid, representing 12% of our total GHG emissions.\\\"]\\n\\n### STEP 8: Total Non-Renewable Energy Evaluation\\n**Total Non-Renewable Energy Consumption**: 318.12 GWh [CALCULATED]\\n\\n### STEP 9: Final Answer\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Wind\\\", \\\"ID\\\": 772, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Solar\\\", \\\"ID\\\": 773, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Geothermal\\\", \\\"ID\\\": 774, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Ambient\\\", \\\"ID\\\": 775, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Tide, Wave, and other Ocean\\\", \\\"ID\\\": 776, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Hydropower\\\", \\\"ID\\\": 777, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Biomass\\\", \\\"ID\\\": 778, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Landfill Gas\\\", \\\"ID\\\": 779, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Sewage Treatment Plant Gas\\\", \\\"ID\\\": 780, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Biogas\\\", \\\"ID\\\": 781, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Coal\\\", \\\"ID\\\": 783, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"District heating from Non-Renewable Sources\\\", \\\"ID\\\": 785, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Electricity from Non-Renewable Sources\\\", \\\"ID\\\": 786, \\\"Value\\\": \\\"318.12\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Gas\\\", \\\"ID\\\": 787, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Fuel\\\", \\\"ID\\\": 789, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"District heating from Renewable Sources\\\", \\\"ID\\\": 848, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Electricity from Renewable Sources\\\", \\\"ID\\\": 849, \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"},\\n{\\\"Company\\\": \\\"Centerra Gold\\\", \\\"Component\\\": \\\"Nuclear\\\", \\\"ID\\\": \\\"TBD\\\", \\\"Value\\\": \\\"NI\\\", \\\"Unit\\\": \\\"GWh\\\", \\\"Year\\\": 2022, \\\"Coverage\\\": \\\"FULL\\\"}\", \"final_answer\": [{\"Company\": \"Centerra Gold\", \"Component\": \"Wind\", \"ID\": 772, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Solar\", \"ID\": 773, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Geothermal\", \"ID\": 774, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Ambient\", \"ID\": 775, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Tide, Wave, and other Ocean\", \"ID\": 776, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Hydropower\", \"ID\": 777, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Biomass\", \"ID\": 778, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Landfill Gas\", \"ID\": 779, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Sewage Treatment Plant Gas\", \"ID\": 780, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Biogas\", \"ID\": 781, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Coal\", \"ID\": 783, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"District heating from Non-Renewable Sources\", \"ID\": 785, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Electricity from Non-Renewable Sources\", \"ID\": 786, \"Value\": \"318.12\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Gas\", \"ID\": 787, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Fuel\", \"ID\": 789, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"District heating from Renewable Sources\", \"ID\": 848, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Electricity from Renewable Sources\", \"ID\": 849, \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}, {\"Company\": \"Centerra Gold\", \"Component\": \"Nuclear\", \"ID\": \"TBD\", \"Value\": \"NI\", \"Unit\": \"GWh\", \"Year\": 2022, \"Coverage\": \"FULL\"}]}"
+{
+    "Coupon_Barrier_Level_Percent": 0.5905817177285316,
+    "Coupon_Barrier_Direction": "Below",
+    "Coupon_Barrier_Continuous": true,
+    "Coupon_Payment_Frequency": "quarterly",
+    "Coupon_Intra_Daily_Monitoring": false,
+    "Coupon_Has_Memory": true,
+    "Coupon_Rate_Per_Annum": true,
+    "Coupon_Conditional_Rate": 0.0337,
+    "Coupon_Guaranteed_Rate": 0.0,
+    "Coupon_Barrier_Calculation_Method": "SingleAsset",
+    "Coupon_Payment_Style": "Binary",
+    "Coupon_Dates": [
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2018-11-19",
+            "coupon_date_payment_date": "2018-11-26",
+            "coupon_date_conditional_rate": 0.01685,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-02-18",
+            "coupon_date_payment_date": "2019-02-25",
+            "coupon_date_conditional_rate": 0.0337,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-05-17",
+            "coupon_date_payment_date": "2019-05-24",
+            "coupon_date_conditional_rate": 0.05055,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-08-19",
+            "coupon_date_payment_date": "2019-08-26",
+            "coupon_date_conditional_rate": 0.0674,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-11-18",
+            "coupon_date_payment_date": "2019-11-25",
+            "coupon_date_conditional_rate": 0.08425,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-02-17",
+            "coupon_date_payment_date": "2020-02-24",
+            "coupon_date_conditional_rate": 0.1011,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-05-18",
+            "coupon_date_payment_date": "2020-05-25",
+            "coupon_date_conditional_rate": 0.11795,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-08-17",
+            "coupon_date_payment_date": "2020-08-24",
+            "coupon_date_conditional_rate": 0.1348,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-11-17",
+            "coupon_date_payment_date": "2020-11-24",
+            "coupon_date_conditional_rate": 0.15165,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-02-17",
+            "coupon_date_payment_date": "2021-02-24",
+            "coupon_date_conditional_rate": 0.1685,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-05-17",
+            "coupon_date_payment_date": "2021-05-24",
+            "coupon_date_conditional_rate": 0.18535,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-08-17",
+            "coupon_date_payment_date": "2021-08-24",
+            "coupon_date_conditional_rate": 0.2022,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-11-17",
+            "coupon_date_payment_date": "2021-11-24",
+            "coupon_date_conditional_rate": 0.21905,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-02-17",
+            "coupon_date_payment_date": "2022-02-24",
+            "coupon_date_conditional_rate": 0.2359,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-05-17",
+            "coupon_date_payment_date": "2022-05-24",
+            "coupon_date_conditional_rate": 0.25275,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-08-17",
+            "coupon_date_payment_date": "2022-08-24",
+            "coupon_date_conditional_rate": 0.2696,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-11-17",
+            "coupon_date_payment_date": "2022-11-24",
+            "coupon_date_conditional_rate": 0.28645,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2023-02-17",
+            "coupon_date_payment_date": "2023-02-24",
+            "coupon_date_conditional_rate": 0.3033,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2023-05-17",
+            "coupon_date_payment_date": "2023-05-24",
+            "coupon_date_conditional_rate": 0.32015,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2023-08-17",
+            "coupon_date_payment_date": "2023-08-24",
+            "coupon_date_conditional_rate": 0.337,
+            "coupon_Date_is_NonBusiness_Date": true
+        }
+    ],
+    "Coupon_First_Observation_Date": "2018-11-19"
+}
