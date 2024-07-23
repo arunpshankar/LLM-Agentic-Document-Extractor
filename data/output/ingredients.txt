@@ -1,156 +1,102 @@
 {
-    "Coupon_Barrier_Level_Percent": 0.5905817177285316,
-    "Coupon_Barrier_Direction": "Below",
-    "Coupon_Barrier_Continuous": true,
-    "Coupon_Payment_Frequency": "quarterly",
-    "Coupon_Intra_Daily_Monitoring": false,
-    "Coupon_Has_Memory": true,
-    "Coupon_Rate_Per_Annum": true,
-    "Coupon_Conditional_Rate": 0.0337,
-    "Coupon_Guaranteed_Rate": 0.0,
-    "Coupon_Barrier_Calculation_Method": "SingleAsset",
-    "Coupon_Payment_Style": "Binary",
-    "Coupon_Dates": [
+    "year": 2022,
+    "metrics": [
         {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2018-11-19",
-            "coupon_date_payment_date": "2018-11-26",
-            "coupon_date_conditional_rate": 0.01685,
-            "coupon_Date_is_NonBusiness_Date": true
+            "code": "711",
+            "item": "Total energy consumption from non-renewable sources",
+            "scope": "Global",
+            "flag": "Full",
+            "value": "1.2",
+            "unit": "Gt",
+            "page_number": 11,
+            "snippet": "In its 2022\nWorld Energy Outlook, the IEA\nestimates that 1.2 Gt of CO\u2082 will\nneed to be captured by 2030,",
+            "flag_reasoning": "Data is sourced from IEA's 2022 World Energy Outlook.",
+            "consumption_type": "Supply Chain Consumption"
         },
         {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2019-02-18",
-            "coupon_date_payment_date": "2019-02-25",
-            "coupon_date_conditional_rate": 0.0337,
-            "coupon_Date_is_NonBusiness_Date": true
+            "code": "RE004",
+            "item": "Direct Solar Energy: Solar Photovoltaics (PV)",
+            "scope": "Country-Specific",
+            "flag": "Partial",
+            "value": null,
+            "unit": null,
+            "page_number": 20,
+            "snippet": "which benefits from geothermal and solar photovoltaic\nrenewable power.",
+            "relevant_information": "Describing the energy sources of the Origine headquarters in Paris.",
+            "flag_reasoning": "Data relates to the energy source of a specific building.",
+            "consumption_type": "Operational Consumption"
         },
         {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2019-05-17",
-            "coupon_date_payment_date": "2019-05-24",
-            "coupon_date_conditional_rate": 0.05055,
-            "coupon_Date_is_NonBusiness_Date": true
+            "code": "774",
+            "item": "Geothermal Energy",
+            "scope": "Country-Specific",
+            "flag": "Partial",
+            "value": null,
+            "unit": null,
+            "page_number": 20,
+            "snippet": "which benefits from geothermal and solar photovoltaic\nrenewable power.",
+            "relevant_information": "Describing the energy sources of the Origine headquarters in Paris.",
+            "flag_reasoning": "Data relates to the energy source of a specific building.",
+            "consumption_type": "Operational Consumption"
         },
         {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2019-08-19",
-            "coupon_date_payment_date": "2019-08-26",
-            "coupon_date_conditional_rate": 0.0674,
-            "coupon_Date_is_NonBusiness_Date": true
+            "code": "783",
+            "item": "Coal: Black Coal, Anthracite, Bituminous, Subbituminous, Lignite",
+            "scope": "Regional",
+            "flag": "Full",
+            "value": null,
+            "unit": null,
+            "page_number": 51,
+            "snippet": "to help some regions in their transition from the most polluting\nsolid fossil fuel energy sources, such as coal, to renewable energy.",
+            "relevant_information": "Refers to the EU Taxonomy's recognition of gas as a transitional energy source in certain regions.",
+            "flag_reasoning": "Refers to regions transitioning from coal to renewable energy.",
+            "consumption_type": "Supply Chain Consumption"
         },
         {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2019-11-18",
-            "coupon_date_payment_date": "2019-11-25",
-            "coupon_date_conditional_rate": 0.08425,
-            "coupon_Date_is_NonBusiness_Date": true
+            "code": "787",
+            "item": "Natural Gas",
+            "scope": "Regional",
+            "flag": "Full",
+            "value": null,
+            "unit": null,
+            "page_number": 51,
+            "snippet": "to help some regions in their transition from the most polluting\nsolid fossil fuel energy sources, such as coal, to renewable energy.",
+            "relevant_information": "Refers to the EU Taxonomy's recognition of gas as a transitional energy source in certain regions.",
+            "flag_reasoning": "Refers to regions transitioning from coal to renewable energy.",
+            "consumption_type": "Supply Chain Consumption"
         },
         {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2020-02-17",
-            "coupon_date_payment_date": "2020-02-24",
-            "coupon_date_conditional_rate": 0.1011,
-            "coupon_Date_is_NonBusiness_Date": true
+            "code": "789",
+            "item": "Fuels: Diesel, Gasoline, LPG (Liquid Petroleum Gas), ULP (Unleaded Petrol), Automotive fuel, Kerosene, Aviation fuel, Jet fuel, Premium",
+            "scope": "Country-Specific",
+            "flag": "Partial",
+            "value": null,
+            "unit": null,
+            "page_number": 26,
+            "snippet": "which can be harmful to workers on construction sites, especially\nin Central America, India and the Middle East.",
+            "relevant_information": "Refers to the use of diesel generators in regions with high temperatures and humidity.",
+            "flag_reasoning": "Data relates to the energy source of specific regions.",
+            "consumption_type": "Operational Consumption"
         },
         {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2020-05-18",
-            "coupon_date_payment_date": "2020-05-25",
-            "coupon_date_conditional_rate": 0.11795,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2020-08-17",
-            "coupon_date_payment_date": "2020-08-24",
-            "coupon_date_conditional_rate": 0.1348,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2020-11-17",
-            "coupon_date_payment_date": "2020-11-24",
-            "coupon_date_conditional_rate": 0.15165,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2021-02-17",
-            "coupon_date_payment_date": "2021-02-24",
-            "coupon_date_conditional_rate": 0.1685,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2021-05-17",
-            "coupon_date_payment_date": "2021-05-24",
-            "coupon_date_conditional_rate": 0.18535,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2021-08-17",
-            "coupon_date_payment_date": "2021-08-24",
-            "coupon_date_conditional_rate": 0.2022,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2021-11-17",
-            "coupon_date_payment_date": "2021-11-24",
-            "coupon_date_conditional_rate": 0.21905,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2022-02-17",
-            "coupon_date_payment_date": "2022-02-24",
-            "coupon_date_conditional_rate": 0.2359,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2022-05-17",
-            "coupon_date_payment_date": "2022-05-24",
-            "coupon_date_conditional_rate": 0.25275,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2022-08-17",
-            "coupon_date_payment_date": "2022-08-24",
-            "coupon_date_conditional_rate": 0.2696,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2022-11-17",
-            "coupon_date_payment_date": "2022-11-24",
-            "coupon_date_conditional_rate": 0.28645,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2023-02-17",
-            "coupon_date_payment_date": "2023-02-24",
-            "coupon_date_conditional_rate": 0.3033,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2023-05-17",
-            "coupon_date_payment_date": "2023-05-24",
-            "coupon_date_conditional_rate": 0.32015,
-            "coupon_Date_is_NonBusiness_Date": true
-        },
-        {
-            "coupon_Date_barrier_level_percent": 0.5905817177285316,
-            "coupon_date_observation_date": "2023-08-17",
-            "coupon_date_payment_date": "2023-08-24",
-            "coupon_date_conditional_rate": 0.337,
-            "coupon_Date_is_NonBusiness_Date": true
+            "code": "789",
+            "item": "Fuels: Diesel, Gasoline, LPG (Liquid Petroleum Gas), ULP (Unleaded Petrol), Automotive fuel, Kerosene, Aviation fuel, Jet fuel, Premium",
+            "scope": "Country-Specific",
+            "flag": "Partial",
+            "value": null,
+            "unit": null,
+            "page_number": 38,
+            "snippet": "The energy consumption of our offices, industrial sites\nand projects we execute for our clients\n(construction sites and yards) is presented in\nthe Impact Book.",
+            "relevant_information": "Refers to the use of diesel generators in remote areas.",
+            "flag_reasoning": "Data relates to the energy source of specific regions.",
+            "consumption_type": "Operational Consumption"
         }
     ],
-    "Coupon_First_Observation_Date": "2018-11-19"
+    "metadata": {
+        "data_sources": "Technip Energies Sustainability Report 2022",
+        "data_collector": "Gemini",
+        "fiscal_year_end": "31/12/2022",
+        "geographical_scope": "Global",
+        "organization_name": "Technip Energies"
+    }
 }

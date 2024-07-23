@@ -1,0 +1,156 @@
+{
+    "Coupon_Barrier_Level_Percent": 0.5905817177285316,
+    "Coupon_Barrier_Direction": "Below",
+    "Coupon_Barrier_Continuous": true,
+    "Coupon_Payment_Frequency": "quarterly",
+    "Coupon_Intra_Daily_Monitoring": false,
+    "Coupon_Has_Memory": true,
+    "Coupon_Rate_Per_Annum": true,
+    "Coupon_Conditional_Rate": 0.0337,
+    "Coupon_Guaranteed_Rate": 0.0,
+    "Coupon_Barrier_Calculation_Method": "SingleAsset",
+    "Coupon_Payment_Style": "Binary",
+    "Coupon_Dates": [
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2018-11-19",
+            "coupon_date_payment_date": "2018-11-26",
+            "coupon_date_conditional_rate": 0.01685,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-02-18",
+            "coupon_date_payment_date": "2019-02-25",
+            "coupon_date_conditional_rate": 0.0337,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-05-17",
+            "coupon_date_payment_date": "2019-05-24",
+            "coupon_date_conditional_rate": 0.05055,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-08-19",
+            "coupon_date_payment_date": "2019-08-26",
+            "coupon_date_conditional_rate": 0.0674,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2019-11-18",
+            "coupon_date_payment_date": "2019-11-25",
+            "coupon_date_conditional_rate": 0.08425,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-02-17",
+            "coupon_date_payment_date": "2020-02-24",
+            "coupon_date_conditional_rate": 0.1011,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-05-18",
+            "coupon_date_payment_date": "2020-05-25",
+            "coupon_date_conditional_rate": 0.11795,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-08-17",
+            "coupon_date_payment_date": "2020-08-24",
+            "coupon_date_conditional_rate": 0.1348,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2020-11-17",
+            "coupon_date_payment_date": "2020-11-24",
+            "coupon_date_conditional_rate": 0.15165,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-02-17",
+            "coupon_date_payment_date": "2021-02-24",
+            "coupon_date_conditional_rate": 0.1685,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-05-17",
+            "coupon_date_payment_date": "2021-05-24",
+            "coupon_date_conditional_rate": 0.18535,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-08-17",
+            "coupon_date_payment_date": "2021-08-24",
+            "coupon_date_conditional_rate": 0.2022,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2021-11-17",
+            "coupon_date_payment_date": "2021-11-24",
+            "coupon_date_conditional_rate": 0.21905,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-02-17",
+            "coupon_date_payment_date": "2022-02-24",
+            "coupon_date_conditional_rate": 0.2359,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-05-17",
+            "coupon_date_payment_date": "2022-05-24",
+            "coupon_date_conditional_rate": 0.25275,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-08-17",
+            "coupon_date_payment_date": "2022-08-24",
+            "coupon_date_conditional_rate": 0.2696,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2022-11-17",
+            "coupon_date_payment_date": "2022-11-24",
+            "coupon_date_conditional_rate": 0.28645,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2023-02-17",
+            "coupon_date_payment_date": "2023-02-24",
+            "coupon_date_conditional_rate": 0.3033,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2023-05-17",
+            "coupon_date_payment_date": "2023-05-24",
+            "coupon_date_conditional_rate": 0.32015,
+            "coupon_Date_is_NonBusiness_Date": true
+        },
+        {
+            "coupon_Date_barrier_level_percent": 0.5905817177285316,
+            "coupon_date_observation_date": "2023-08-17",
+            "coupon_date_payment_date": "2023-08-24",
+            "coupon_date_conditional_rate": 0.337,
+            "coupon_Date_is_NonBusiness_Date": true
+        }
+    ],
+    "Coupon_First_Observation_Date": "2018-11-19"
+}

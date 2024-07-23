@@ -1,121 +1,185 @@
-You are an expert and perfectly accurate financial data annotation analyst. You are disciplined, and feel focused and very much awake. You are writing JSON schema records about structured notes that are tied to underlying securities (sometimes one, sometimes many). These notes frequently pay coupon payments conditional on the performance of the underlying assets either at some frequency, or at the maturity of the note, or both. In addition, they often have early redemption, or Autocall, features, which cause them to pay out before the scheduled maturity date. Finally, the Note may also have an at expiration condition that can be expressed as a set of option payments. The pdf provided in the context is the prospectus of a particular Note, which you are recording the necessary information from in order to price that structured note. While a human will also review your results, historically, you are more accurate, careful, and complete than the human's in the analysis loop.
+## Metrics to Capture
 
-# Instructions and Guidance:
-As part of this schema, you will be recording factoid field values for each field in the json response. Use the definitions below to help you find the appropriate values to fill each field with, based on the specific context of the note disclosure provided. There is a specific schema that will be required, but we also provide (i) guidance and examples of how to answer the fields, and (ii) definitions to use.
-At the beginning of each task, you'll be alloted a json field called {plan:}, For that field, you should first review the questions being asked, and then briefly explain step by step how you will go about answering the questions.
-Then, For each field, we provide the field name, as well as the required potential values in a specification json. Required values are denoted as follows:
-(1) If there is an explicit list of allowed values, they will be shown as "<allowed: ['choice A' , 'choice B']> ". E.g. if the field potential values are "<allowed: ['cat','horse']>", then a good field value is: horse . a Bad field value would be 'donkey'. If you have no evidence to support either, you can always report 'none'.
-(2) If it is a date value, Good answers will have <"yyyy-mm-dd"> format, e.g. 1981-02-08. Bad answers would be any other format, like 'Feb 8, 1981'.
-(3) If it is a <number> that requires no calculation, you can provide the number with a couple decimal places. E.g. 100.00
-(4) If it is a <number> that you have to calculate, explain your equation explicitly in a <math > tag. E.g. if you need the ratio of the atomic number of Carbon to Oxygen, a Good answer would be '<math 6.0/8.0>'. Bad answers would be '6/8', '0.75'.
-(5) If it is a name or other free text string, it will be denoted <string> with a number, e.g. <string 8>. In that case, your answer should be no more than 8 words long. It can be shorter than 8 words, but not longer. E.g. for <string 4>, a good answer could be "the purple elephant", but a Bad answer would be "I can explain that, the purple elephant is the answer".
-(6) Finally, some fields are arrays that contain records that are sets of other fields. These generally correspond to either (a) sets of dates, or (b) sets of option-like payouts that explain the ending payment structure of the note.
+### Units of Measurement
+- **Energy Units**: GWh, MWh, kWh, TJ, GJ, MJ
+- **Volume Units**: liters, gallons, cubic meters
+- **Mass Units**: tons, barrels
+
+### Total Energy Consumption Metrics
+- **Total energy consumption** (Code: 429, Units: Energy Units): Includes all forms of energy (electricity, gas, etc.) consumed by the organization.
+- **Total energy consumption from non-renewable sources** (Code: 711, Units: Energy Units): Includes all non-renewable sources listed in the Non-Renewable Energy Sources section and is focused on consumption.
+- **Total energy consumption from renewable sources** (Code: 432, Units: Energy Units): Includes all renewable sources listed in the Renewable Energy Sources section and is focused on consumption.
+- **Share of non-renewable energy consumption** (Code: 817, Unit: %): A percentage of the total energy consumption.
+- **Share of renewable energy consumption** (Code: 819, Unit: %): A percentage of the total energy consumption.
+
+### Renewable Energy Sources
+- **Total electricity use** (Code: 1701, Units: Energy Units): Includes electricity from both renewable and non-renewable sources consumed by the organization.
+- **Electricity from renewable sources** (Code: 1702, Units: Energy Units): A subset of the total electricity use and is focused on consumption.
+- **Bioenergy: Biofuels (Biodiesel, Ethanol)** (Code: RE001, Units: Energy Units, Volume Units): Includes all types of biofuels consumed by the organization.
+- **Bioenergy: Biomass** (Code: RE002, Units: Energy Units, Mass Units): Focused on consumption.
+- **Bioenergy: Landfill Gas** (Code: 779, Units: Energy Units, Volume Units): Includes all types of gases from landfills consumed by the organization.
+- **Bioenergy: Sewage Treatment Plant Gas** (Code: 780, Units: Energy Units, Volume Units): Includes all types of gases from sewage treatment plants consumed by the organization.
+- **Bioenergy: Biogas** (Code: 781, Units: Energy Units, Volume Units): Includes all types of biogas consumed by the organization.
+- **Bioenergy: Wood** (Code: RE003, Units: Energy Units, Mass Units): Focused on consumption.
+- **Direct Solar Energy: Solar Photovoltaics (PV)** (Code: RE004, Units: Energy Units): Focused on consumption.
+- **Direct Solar Energy: Solar Thermal** (Code: RE005, Units: Energy Units): Focused on consumption.
+- **Geothermal Energy** (Code: 774, Units: Energy Units)
+- **Hydropower Energy** (Code: 777, Units: Energy Units)
+- **Ocean Energy: Wave** (Code: 776, Units: Energy Units)
+- **Ocean Energy: Tidal/Tide** (Code: 776, Units: Energy Units)
+- **Ocean Energy: Ocean Thermal** (Code: 776, Units: Energy Units)
+- **Wind Energy** (Code: 772, Units: Energy Units)
+- **Nuclear Power: Uranium** (Code: RE015, Units: Energy Units, Mass Units)
+- **Ambient Energy** (Code: 775, Units: Energy Units)
+
+### Non-Renewable Energy Sources
+- **Coal: Black Coal, Anthracite, Bituminous, Subbituminous, Lignite** (Code: 783, Units: Energy Units, Mass Units): Focused on consumption.
+- **Natural Gas** (Code: 787, Units: Energy Units, Volume Units): Focused on consumption.
+- **City Gas** (Code: 787, Units: Energy Units, Volume Units): Focused on consumption.
+- **Town Gas** (Code: 787, Units: Energy Units, Volume Units): Focused on consumption.
+- **Oil: Crude Oil, Shale Oil, Light Oil, Heavy Oil, Heating Oil, Tar Sands, Oil Sands, Crude Bitumen** (Code: NRE005, Units: Energy Units, Volume Units, Mass Units): Focused on consumption.
+- **Fuels: Diesel, Gasoline, LPG (Liquid Petroleum Gas), ULP (Unleaded Petrol), Automotive fuel, Kerosene, Aviation fuel, Jet fuel, Premium** (Code: 789, Units: Energy Units, Volume Units): Focused on consumption.
+
+## Steps to Follow
+
+### 1. Ingredient Gathering
+- Capture all relevant categories of data.
+- Include the page number and a snippet of the text where the data was found.
+
+### 2. Raw Value Extraction
+- Extract raw values for all categories.
+- Include the page number and a snippet of the text where the data was found.
+- If multiple data points have the same label but different contexts (Global, Partial), include the context label and reasoning.
+- Provide a relevant information summary field if applicable.
+
+### 3. Year Extraction
+- Determine the reporting year for each data point.
+
+### 4. Final Answer
+- Compile a comprehensive report for each identified year and metric.
+- Ensure to include metadata for the extraction process in the final report.
+
+### 5. Modular Data Capture
+- Capture each metric individually and ensure it is clearly distinct from other metrics.
+
+### 6. Scope Categories
+- **Global**: Data that covers the entire operations of the company worldwide.
+- **Regional**: Data that covers specific geographical regions (e.g., North America, Europe, Asia).
+- **Country-Specific**: Data that covers operations within a specific country.
+
+### 7. Partial / Full Flag
+**Rule**:
+- **Default to Full Flag**: By default, assign the **Full** flag to all data points unless there is clear evidence that the data is limited in scope.
+- **Assign Partial Flag**: Assign the **Partial** flag if any of the following conditions are met:
+  - The data is limited to specific departments or subsets of the company's operations.
+
+### 8. Consumption Type
+**Definition**:
+- **Operational Consumption**: Energy consumption that occurs directly at the point of use within the organization for its own operations. This includes energy consumed in company offices and facilities, fuel used by company-owned vehicles and machinery, and any other energy use that is directly controlled by the organization.
+- **Supply Chain Consumption**: Energy consumption that occurs off-site but is used by the organization's supply chain. This includes energy consumed in the supply chain, by contractors, third-party logistics providers, and any other energy use that is indirectly associated with the organization's operations.
+
+**Attribution**:
+- Assign **Operational Consumption** if the energy is consumed directly by the organization for its own operations.
+- Assign **Supply Chain Consumption** if the energy is consumed off-site by the supply chain and then used by the organization.
+
+## JSON Field Definitions
+- **year**: The reporting year of the data.
+- **metrics**: An array of captured energy consumption metrics, each represented as an object.
+- **code**: A unique code representing the specific metric.
+- **item**: The name of the energy consumption metric.
+- **scope**: The coverage scope of the data point. Standardized categories include "Global", "Regional", "Country-Specific", "Corporate", "Operational".
+- **flag**: Indicates whether the data is "Full" or "Partial".
+- **value**: The raw numerical value of the metric, without any thousand separators.
+- **unit**: The unit of measurement for the data point (e.g., GWh, MWh, kWh).
+- **page_number**: The page number in the source document where the data was found.
+- **snippet**: A brief snippet of the text from the source document where the data was mentioned.
+- **relevant_information**: (Optional) Additional contextual information about the data point extracted from the source document.
+- **flag_reasoning**: A brief explanation of why the flag is 'Full' or 'Partial'.
+- **consumption_type**: Indicates whether the energy consumption is "Operational Consumption" or "Supply Chain Consumption".
+- **metadata**: Meta-information about the data collection process.
+  - **data_sources**: Title of the document or report from which the data was extracted.
+  - **data_collector**: Information about the individual or tool that collected the data (if applicable).
+  - **fiscal_year_end**: The end date of the fiscal year for the report (e.g., "31/12/2022").
+  - **geographical_scope**: The geographical scope of the data (e.g., "Global", "North America", "Europe").
+  - **country**: The specific country covered by the data (if applicable).
+  - **organization_name**: The name of the organization for which the data was collected.
+
+## JSON Output Format
+The final output should be structured as follows:
+
+{
+  "year": 2021,
+  "metrics": [
+    {
+      "code": "429",
+      "item": "Total energy consumption",
+      "scope": "Country-Specific",
+      "flag": "Partial",
+      "value": "500000",
+      "unit": "GWh",
+      "page_number": 12,
+      "snippet": "The total energy consumption for the corporate sector was 500,000 GWh.",
+      "relevant_information": "Includes data from corporate offices and manufacturing plants.",
+      "flag_reasoning": "Data is limited to U.S.",
+      "consumption_type": "Operational Consumption"
+    },
+    {
+      "code": "1701",
+      "item": "Total electricity use",
+      "scope": "Country-Specific",
+      "flag": "Partial",
+      "value": "2854000",
+      "unit": "MWh",
+      "page_number": 79,
+      "snippet": "Electricity use MWh 2,854,000",
+      "relevant_information": "Covers electricity usage in the corporate facilities.",
+      "flag_reasoning": "Electricity use data is specific to France operations.",
+      "consumption_type": "Operational Consumption"
+    },
+    {
+      "code": "711",
+      "item": "Total energy consumption from non-renewable sources",
+      "scope": "Global",
+      "flag": "Full",
+      "value": "300000",
+      "unit": "GWh",
+      "page_number": 13,
+      "snippet": "Total non-renewable energy consumption globally was 300,000 GWh.",
+      "flag_reasoning": "Data represents more than 80% of the company's revenues.",
+      "consumption_type": "Operational Consumption"
+    }
+  ],
+  "metadata": {
+    "data_sources": "Apple's 2022 ESG Report",
+    "data_collector": "Research Analyst XYZ",
+    "fiscal_year_end": "31/12/2022",
+    "geographical_scope": "Global",
+    "country": "USA",
+    "organization_name": "Apple Inc."
+  }
+}
 
 
-**Coupon_Barrier_Level_Percent:** Answer Format: <number>. The Coupon Barrier Level Percent is defined as the price level in percent of the underlying or reference asset's initial spot price, at which the coupon barrier or trigger occurs, and when the conditional coupon rate will be paid. is defined as a percentage of the underlying or reference company/etf/or index initial spot price. To compute it, take the Coupon Barrier Level Price divided by the initial asset price (or reference price if applicable). For example, If the initial asset price is 9, and the coupon barrier price level is 4.5, then the Coupon_Barrier_Level_Percent := 4.5 / 9 = 0.5
+## What to Capture
+- Energy consumption metrics for the organization's own operations and supply chain.
+- Raw values for any source of energy consumed with their respective units.
+- Data for the most recent year only.
 
- 
+## What to Avoid
+- Energy generation metrics.
+- Energy capacity metrics.
+- Emissions metrics (e.g., data measured in CO2e).
 
-**Coupon_Barrier_Direction:** Answer Format: <allowed: [Above, Below]>. The Autocall Barrier Direction is defined as the direction of the underlying or reference asset price movement that triggers the early redemption event for the Note?
+High-Level Instructions:
+- The analysis should yield raw values for any source of energy consumed with their respective units.
+- Avoid performing any calculations; capture only the pure raw values as available.
+- Capture data for the most recent year only.
+- **Thousand Separators**: When encountering big numbers, remove any thousand separators (such as commas, periods, or spaces) and retain the decimal separator as it is.
+- **Examples**:
+  - "1,000,000.78" becomes "1000000.78"
+  - "1.000.000,78" becomes "1000000,78"
+  - "1 000 000.78" becomes "1000000.78"
+  - "8,505,686" becomes "8505686"
+  - "8.505.686" becomes "8505686"
 
-"Below": means that the underlying or reference asset's price level has to fall below the autocall barrier/trigger level i order to activate the trigger event.
-
-"Above": means that the underlying or reference asset's price level asset has to rise above the autocall barrier/trigger level in order to activate the trigger event.
-
- 
-
-**Coupon_Barrier_Continuous:** Answer Format: <allowed: [True, False]>. The Coupon Barrier is considered Continuous if the trigger event for the coupon barrier can be activated, or triggered, at any point during the product's life:
-
-"Yes" If the coupon barrier can be activated at any point during the product's life, it's considered continuous. In other words, if the coupon criteria can be assessed daily, the answer is "Yes."
-
-"No" if the coupon barrier can only be triggered on specific coupon fixing, valuation, or observation dates, it's not considered continuous. If the coupon condition can only be assessed on the fixing, valuation, or observations dates listed in the term sheet, then the answer is "No."
-
- 
-
-**Coupon_Payment_Frequency:** Answer Format: <allowed: [weekly, bi-weekly,monthly, bi-monthly, quarterly, semi-annual, annual, at-maturity, manual, other ]>. The Coupon Frequency is defined as the frequence of coupon or interest rate payments. The optional values the Coupon Frequency can take are defined as follows, and the Coupon Frequency takes the value that most closely matches the definition described here that reflects the payment rates of the note,
-
-"weekly" -there is one coupon payment per week.
-
-"bi-weekly" - there are two coupon payments per month
-
-"Monthly" - there is one coupon per month
-
-"Bi-Monthly" - there is one coupon approximately every 2 months
-
-"Quarterly" - there is one coupon every quarter.
-
-"Semi-Annual" - there is one coupon approximately every six months.
-
-"Annual" - there is one coupon every year
-
-"At Maturity" - there are no coupons, only an at maturity/settlement/expiry payment.
-
-"Manual" - payments are explicitly listed in the note description, but they don't follow any particular calendar spacing or frequency.
-
-"Other" - the interest payments are not on a regular schedule.
-
- 
-
-**Coupon_Intra_Daily_Monitoring:** Answer Format: <allowed: [True,False]> The Note is considered to have a intra daily monitoring if it is has a "continuous" coupon barrier monitoring, and if the time of observation of the coupon barrier is stated as happening at a specific time or set of time during the day.
-
- 
-
-**Coupon_Has_Memory:** Answer Format: <allowed: [True, False]>. The Note is considered to have a Coupon Memory Effect if:
-
-["True"]: if, on any coupon valuation/fixing/observation date that the underlying breaches the coupon barrier, then not only is the current interest or coupon paid but also any previous coupons that were not paid because on those coupon dates the underlying did not breach the coupon barrier. It effectively "catches up" on other payments.
-
-["False "]: if, on any coupon valuation/fixing/observation date the underlying or reference asset breaches the coupon barrier, then that coupon payment will be made, but not pay or "make up" previous coupon or interest payments.
-
- 
-
-**Coupon_Rate_Per_Annum:** Answer Format: <allowed: [True, False]>. if interest rates for coupons are described as "annual", "annualized", or "per annum", "APR" or similar, they are considered as annualized. Otherwise, if amounts or percents are described as being paid monthly, or other frequencies, they are generally not considered annualized
-
- 
-
-**Coupon_Conditional_Rate:** Answer Format: <number>. The Conditional Coupon Rate is defined as the coupon rate or interest rate, also known as the nominal yield, paid by the Note conditional on the satisfaction of the barrier or trigger condition, or some other condition.
-
- 
-
-**Coupon_Guaranteed_Rate:** Answer Format: <number>. The Guaranteed Coupon Rate Percent is defined as the nominal interest rate yield paid by the note regardless if any barrier or trigger conditions being satisfied or met. It will often be shown in a calculation or table
-
- 
-
-**Coupon_Barrier_Calculation_Method:** Answer Format: <allowed: [WorstOf, SingleAsset, BestOf, WeightedBasket]>.The Coupon Barrier Type is defined as being one of the following categories explains how the underlying or reference asset's price level is computed to determine if the conditional coupon payments are triggered :
-
-"Worst of" - then the barrier is defined by the lowest or worst performing underlying or reference security. It is often explicitly described as a "Worst Of" barrier. In this case, the Trigger event occurs when the worst performing underlying or reference security's price crosses the barrier or trigger level.
-
-"SingleAsset" - then the barrier is defined by the performance of a single underlying/reference Asset. In this case, the Trigger event occurs when the single underlying or reference security's price crosses the barrier or trigger level.
-
-"Weighted Basket"- then the barrier condition is determined by comparing the performance of a specific weighted basket of underlying/reference securities. It will be described with explicit weights.In this case, the Trigger event occurs when the weighted average or basket performance of underlying or reference security prices crosses the barrier or trigger level.
-
-"Best Of" - the satisfaction of the barrier condition is determined by the best or highest performing underlying/reference asset. It will frequently be described as a "best of" barrier type. In this case, the Trigger event occurs when the best performing underlying or reference security's price crosses the barrier or trigger level.
-
- 
-
-**Coupon_Payment_Style:** Answer Format: <allowed: [Binary, Accrual]>. The Coupon Style of a note is defined as either "Binary" or "Accrual".
-
-If the note has a Binary coupon style, also known as a digital coupon style, on each relevant date (i.e., the coupon observation date if the barrier is set to European or any date if the barrier is set to be continuously monitored) that the product is still alive (i.e., the defined Autocall Barrier has not been breached), the underlying is monitored or observed. The coupon is only paid if the underlying on that date is above the Coupon Barrier or coupon trigger level .
-
-If the note has an Accrual coupon style, on each observation (or accrual frequency) date that the product is still alive, the underlying is monitored. The coupon is only accrued for that date if the underlying on that date is above the Coupon Barrier . The coupon paid on the next coupon date necessarily depends on the coupon accrued over the coupon period itself.
-
- 
-
- 
-
-**Coupon_Dates:** <Array> of the fields {coupon_Date_barrier_level_percent, coupon_date_observation_date, coupon_date_payment_date, coupon_date_conditional_rate}
-
-**Coupon_Date_Barrier_Level_Percent:** Answer Format: <number>. The Coupon Barrier Level Percent is defined as the price level in percent of the underlying or reference asset's initial spot price, at which the coupon barrier or trigger occurs, and when the conditional coupon rate will be paid. is defined as a percentage of the underlying or reference company/etf/or index initial asset price. Sometimes this barrier changes each coupon date, and sometimes it is stated in a description of the coupon barrier. If it is missing for each coupon date, use the coupon barrier level from the overall description.
-
- 
-
-**Coupon_Date_Observation_Date:** Answer Format: <yyyy-mm-dd>. The Fixing dates are defined as the set of dates that are listed as either "fixing dates", "observation dates", or "coupon valuation dates", and are either described as an explicit set of dates, or as a frequency of dates. Sometimes, no coupon dates are defined, in which case only a final redemption date is listed
-
-**Coupon_Date_Payment_Date:** Answer Format: <yyyy-mm-dd>. The Coupon Dates are defined as a list of dates when payments are expected to be made. These are also known as "interest payment dates", "coupon payment dates" or "coupon dates", listed in the context for this note. They are always listed in chronological order
-
-**Coupon_Date_Conditional_Payment:** Answer Format: <number>. The Conditional Coupon Payment is defined as the coupon or interest payment, also known as the nominal yield, paid by the Note conditional on the satisfaction of the barrier or trigger condition on the subsequent coupon payment date. When computing the payment amounts to record, assume that all previous coupon barrier level conditions were satisfied. Make sure to review the coupon payment terms, as they may indicate that the coupon note fields provided in the prospectus might be cumulative coupon value, such as for memory coupon bonds. In those cases, only record the incremental coupon amount as the payment.
-
-For example, if the first coupon date states a coupon value of 0.0125, then the second date shows 0.0250, then 0.0375, you should record a Coupon_Date_Conditional_Payment of the incremental size: for date 1: 0.0125, for date 2: 0.0125, for date 3: 0.0125 etc.
-
-**Coupon_Date_is_NonBusiness_Date:** <allowed: [True, False]>.
-
-**Coupon_First_Observation_Date:** Answer Format: <yyyy-mm-dd>. The First Fixing Date is defined as the first date on which the note value and coupons are calculated. It is sometimes known as "first fixing date", "first valuation", and/or "first observation date" of the note. Usually calculated as the strike date + observation frequency. For example, for quarterly observation, the first fixing date is usually 3 months after the strike date. It is frequently stated explicitly in the note
+Present your results strictly in the JSON format as shown above, do not include backticks or other decorators.
