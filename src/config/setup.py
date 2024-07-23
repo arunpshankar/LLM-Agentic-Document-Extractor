@@ -33,9 +33,7 @@ class Config:
         self.BUCKET = self.__config['bucket']
         self.CREDENTIALS_PATH = self.__config['credentials_json']
         self._set_google_credentials(self.CREDENTIALS_PATH)
-        self.ACCESS_TOKEN = self._set_access_token()
         self.TEXT_GEN_MODEL_NAME = self.__config['text_gen_model_name']
-        self.TEXT_EMBED_MODEL_NAME = self.__config['text_embed_model_name']
 
     @staticmethod
     def _load_config(config_path: str) -> Dict[str, Any]:
@@ -63,23 +61,6 @@ class Config:
         - credentials_path (str): Path to the Google credentials file.
         """
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_path
-
-    @staticmethod
-    def _set_access_token() -> str:
-        """
-        Fetch an access token for authentication.
-
-        Returns:
-        - str: The fetched access token.
-        """
-        logger.info("Fetching access token...")
-        cmd = ["gcloud", "auth", "print-access-token"]
-        try:
-            token = subprocess.check_output(cmd).decode('utf-8').strip()
-            logger.info("Access token obtained successfully.")
-            return token
-        except subprocess.CalledProcessError as e:
-            logger.error(f"Failed to fetch access token. Error: {e}")
 
 
 config = Config()
