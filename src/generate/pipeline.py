@@ -12,6 +12,7 @@ import os
 
 DATA_DIR = './data'
 OUTPUT_DIR = os.path.join(DATA_DIR, 'output')
+GEN_DIR = os.path.join(DATA_DIR, 'generated')
 
 
 def load_file(file_path: str) -> str:
@@ -209,16 +210,42 @@ def step_3(model: GenerativeModel, pdf_parts: Part, output_path: str):
         logger.error(f"Error in step_3: {e}")
 
 
+def convert_json_to_jsonl(input_file, output_file):
+    # Read the input JSON file
+    with open(input_file, 'r') as f:
+        data = json.load(f)
+        
+     # Ensure the output directory exists
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+    # Write each item as a separate line in the output JSONL file
+    with open(output_file, 'w') as f:
+        for item in data:
+            json.dump(item, f)
+            f.write('\n')
+
+
+def step_4(input_file, output_file):
+    convert_json_to_jsonl(input_file, output_file)
+    print(f"Conversion complete. JSONL file saved as {output_file}")
+
 def main():
     try:
-        logger.info("Starting main process")
-        pdf_bytes = load_binary_file(os.path.join(DATA_DIR, 'test_doc.pdf'))
-        pdf_parts = Part.from_data(data=pdf_bytes, mime_type='application/pdf')
+        for filename in os.listdir('./data/pdfs'):
+            if filename.endswith('.pdf'):
+                # Get the full path to the PDF file
+                full_path = os.path.join('./data/pdfs', filename)
+                print(full_path)
+                logger.info("Starting main process")
+                pdf_bytes = load_binary_file(full_path)
+                pdf_parts = Part.from_data(data=pdf_bytes, mime_type='application/pdf')
 
-        step_1(config.TEXT_GEN_MODEL_NAME, pdf_parts, os.path.join(OUTPUT_DIR, 'out_step_1.txt'))
-        step_2(config.TEXT_GEN_MODEL_NAME, pdf_parts, os.path.join(OUTPUT_DIR, 'out_step_2.txt'))
-        step_3(config.TEXT_GEN_MODEL_NAME, pdf_parts, os.path.join(OUTPUT_DIR, 'out_step_3.txt'))
-        logger.info("Main process completed successfully")
+                step_1(config.TEXT_GEN_MODEL_NAME, pdf_parts, os.path.join(OUTPUT_DIR, 'out_step_1.txt'))
+                step_2(config.TEXT_GEN_MODEL_NAME, pdf_parts, os.path.join(OUTPUT_DIR, 'out_step_2.txt'))
+                step_3(config.TEXT_GEN_MODEL_NAME, pdf_parts, os.path.join(OUTPUT_DIR, 'out_step_3.txt'))
+                filename = filename.replace('.pdf', '')
+                step_4(os.path.join(OUTPUT_DIR, 'out_step_3.txt'), os.path.join(GEN_DIR, f'{filename}.jsonl'))
+                logger.info("Main process completed successfully")
     except Exception as e:
         logger.error(f"Error in main: {e}")
 
